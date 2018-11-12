@@ -9,7 +9,9 @@
 import UIKit
 
 class RightChatTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var message: UITextView!
+    @IBOutlet weak var wrapperView: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

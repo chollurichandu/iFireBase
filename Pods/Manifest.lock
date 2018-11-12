@@ -1,0 +1,65 @@
+PODS:
+  - Firebase/Auth (5.11.0):
+    - Firebase/CoreOnly
+    - FirebaseAuth (= 5.0.4)
+  - Firebase/CoreOnly (5.11.0):
+    - FirebaseCore (= 5.1.6)
+  - Firebase/Database (5.11.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (= 5.0.3)
+  - FirebaseAuth (5.0.4):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.0)
+    - GoogleUtilities/Environment (~> 5.2)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseAuthInterop (1.0.0)
+  - FirebaseCore (5.1.6):
+    - GoogleUtilities/Logger (~> 5.2)
+  - FirebaseDatabase (5.0.3):
+    - FirebaseCore (~> 5.0)
+    - leveldb-library (~> 1.18)
+  - FirebaseUI/Auth (5.2.2):
+    - Firebase/Auth (~> 5.0)
+  - FirebaseUI/Phone (5.2.2):
+    - FirebaseUI/Auth
+  - GoogleUtilities/Environment (5.3.4)
+  - GoogleUtilities/Logger (5.3.4):
+    - GoogleUtilities/Environment
+  - GTMSessionFetcher/Core (1.2.0)
+  - IQKeyboardManagerSwift (6.2.0)
+  - leveldb-library (1.20)
+
+DEPENDENCIES:
+  - Firebase/Auth
+  - Firebase/Database
+  - FirebaseUI/Phone
+  - IQKeyboardManagerSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Firebase
+    - FirebaseAuth
+    - FirebaseAuthInterop
+    - FirebaseCore
+    - FirebaseDatabase
+    - FirebaseUI
+    - GoogleUtilities
+    - GTMSessionFetcher
+    - IQKeyboardManagerSwift
+    - leveldb-library
+
+SPEC CHECKSUMS:
+  Firebase: b48f9e653da971ecce5b8c749684bc8bb2d26bd3
+  FirebaseAuth: 504b198ceb3472dca5c65bb95544ea44cfc9439e
+  FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
+  FirebaseCore: d16552f06821489ce1affe2e5e3e5593402ddfe3
+  FirebaseDatabase: e2bcbc106adc4b11a2da3ec2eb63c0c4a44f2f54
+  FirebaseUI: 09519bf436a055cd696bf68687d624423150e4c0
+  GoogleUtilities: abb092d2c12e817fa3e0e7b274987dd72fb86ec3
+  GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+
+PODFILE CHECKSUM: 5ced1ee5f6aec6d86fce9c07782c4fed94df543d
+
+COCOAPODS: 1.5.3

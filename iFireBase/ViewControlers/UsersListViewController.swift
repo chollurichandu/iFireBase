@@ -37,6 +37,10 @@ class UsersListViewController: UIViewController {
     }
 }
 extension UsersListViewController:UITableViewDelegate,UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.messages.count
     }
@@ -46,7 +50,7 @@ extension UsersListViewController:UITableViewDelegate,UITableViewDataSource{
         // Unpack message from Firebase DataSnapshot
         let messageSnapshot: DataSnapshot! = self.messages[indexPath.row]
         guard let message = messageSnapshot.value as? [String:Any] else { return cell }
-        
+        print(messageSnapshot.key)
         let name = message["profileDisplayName"] as? String ?? ""
         cell.nameLabel.text = name
         return cell
@@ -55,6 +59,8 @@ extension UsersListViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let chatViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+        let messageSnapshot: DataSnapshot! = self.messages[indexPath.row]
+        chatViewController.chatWith = messageSnapshot.key
         self.navigationController?.pushViewController(chatViewController, animated: true)
     }
 }
