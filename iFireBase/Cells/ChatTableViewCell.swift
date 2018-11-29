@@ -12,6 +12,7 @@ class ChatTableViewCell: UITableViewCell {
 
     @IBOutlet weak var wrapperView: UITextView!
     @IBOutlet weak var message: UITextView!
+    @IBOutlet weak var time: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

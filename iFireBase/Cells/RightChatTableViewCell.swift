@@ -11,6 +11,7 @@ import UIKit
 class RightChatTableViewCell: UITableViewCell {
     @IBOutlet weak var message: UITextView!
     @IBOutlet weak var wrapperView: UITextView!
+    @IBOutlet weak var time: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

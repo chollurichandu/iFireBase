@@ -27,8 +27,10 @@ class LoginViewController: UIViewController {
     @IBAction func signin(_ sender: Any) {
         if emailField.text == ""{
             self.showAlertWithMessage(message: "Please enter E-mail")
+            return
         }else if passwordField.text == ""{
             self.showAlertWithMessage(message: "Please enter Password")
+            return
         }
         
         auth.signIn(withEmail: emailField.text!, password: passwordField.text!) { (authResult, error) in            
@@ -43,6 +45,6 @@ class LoginViewController: UIViewController {
         }
     }
     @IBAction func gotoLogin(_ sender: Any) {
-        performSegue(withIdentifier: "LoginSegue", sender: self)
+          self.navigationController?.popViewController(animated: true)
     }
 }
