@@ -13,33 +13,34 @@ import FirebaseStorage
 
 class ChatViewController: UIViewController {
     
+    //MARK:- Outlet fields
+    @IBOutlet weak var infoLab: UILabel!
     @IBOutlet weak var chatTable: UITableView!
+    @IBOutlet weak var messageText: UITextField!
     
+    //MARK:- Private fields
     fileprivate var ref: DatabaseReference!
     fileprivate var messages: [DataSnapshot]! = []
     fileprivate var msglength: NSNumber = 10
     fileprivate var _refHandle: DatabaseHandle?
-    @IBOutlet weak var messageText: UITextField!
-    
-    var chatWith:String = ""
-    
-    var uid:String = ""
-    
-    var width:CGFloat = 0
+    fileprivate var uid:String = ""
+    fileprivate var width:CGFloat = 0
+   
+    //MARK:- Param fields
+    var chatWith:String = "" //user id who we are chatting with
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Chat"
+        self.infoLab.text = ""
         uid = Auth.auth().currentUser?.uid ?? ""
         configureDatabase()
     }
-    fileprivate func getId( s1:String, s2:String) -> String{
-        if (s1 > s2) {
-            return "\(s1)_\(s2)"
-        } else {
-            return "\(s2)_\(s1)"
-        }
-    }
+    
+    
     func configureDatabase() {
+        //MARK:- Create Database refference
+        //To create url of these two user chat call "getID" method
         ref = Database.database().reference().child("messages/\(getId(s1: (Auth.auth().currentUser?.uid)!, s2: chatWith))")
         print(getId(s1: (Auth.auth().currentUser?.uid)!, s2: chatWith))
         // Listen for new messages in the Firebase database
@@ -51,14 +52,26 @@ class ChatViewController: UIViewController {
         })
         
     }
+    //MARK:- get both user message id
+    fileprivate func getId( s1:String, s2:String) -> String{
+        //if user a message with b or b message a we have to create
+        //one url which share same DB url
+        if (s1 > s2) {
+            return "\(s1)_\(s2)"
+        } else {
+            return "\(s2)_\(s1)"
+        }
+    }
     fileprivate func downloadProfilePic(imageView:UIImageView, image:String) {
         if Auth.auth().currentUser != nil{
+            //Create storage object
             let storage = Storage.storage()
             
+            //create file referece which we have to download
             let storageRef = storage.reference(withPath:"chat/\(image)")//.child("2465785.jpg") //forURL:"gs://developers-point.appspot.com/2465785.jpg"
-            
+            // Download image
             // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-            storageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            storageRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
                 if let error = error {
                     print(error)
                     // Uh-oh, an error occurred!
@@ -234,8 +247,10 @@ extension ChatViewController:UIImagePickerControllerDelegate, UINavigationContro
                 // Create a reference to the file you want to upload
                 let riversRef = storageRef.child("chat/\(fileName).jpg")
                 
+                self.infoLab.text = "File uploading"
                 // Upload the file to the path "images/rivers.jpg"
                 let uploadTask = riversRef.putFile(from: imageUrl , metadata: nil) { (metadata, error) in
+                    self.infoLab.text = ""
                     print(error)
                     guard let metadata = metadata else {
                         // Uh-oh, an error occurred!
@@ -243,6 +258,9 @@ extension ChatViewController:UIImagePickerControllerDelegate, UINavigationContro
                     }
                     self.sendMessage(message: "\(fileName).jpg" , type: "image")
                     
+                }
+                uploadTask.observe(.progress) { (snapshot) in
+                    print(snapshot.progress) // NSProgress object
                 }
             }
         }else{

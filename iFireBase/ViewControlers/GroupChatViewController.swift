@@ -93,10 +93,10 @@ extension GroupChatViewController:UITableViewDataSource,UITableViewDelegate{
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
             
-            let name = message?["message"] as? String ?? ""
+            let message = message?["message"] as? String ?? ""
             cell.wrapperView.frame.size.width = width
             cell.message.frame.size.width = width
-            cell.message.text = name
+            cell.message.text = message
             
             return cell
         }

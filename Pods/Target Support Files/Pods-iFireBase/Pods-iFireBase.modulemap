@@ -1,6 +1,0 @@
-framework module Pods_iFireBase {
-  umbrella header "Pods-iFireBase-umbrella.h"
-
-  export *
-  module * { export * }
-}
