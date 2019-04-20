@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,38 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat" translatesAutoresizingMaskIntoConstraints="NO" id="Pd9-QN-gKz">
+                                <rect key="frame" x="87.5" y="46" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="9dL-SS-FKN"/>
+                                    <constraint firstAttribute="height" constant="200" id="NOq-VN-fIc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iFirebase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyL-sQ-Au5">
+                                <rect key="frame" x="85.5" y="296" width="204.5" height="68.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="57"/>
+                                <color key="textColor" red="0.58823529411764708" green="0.27058823529411763" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Sample app which cover &quot;Firebase Login&quot;, &quot;Live DB&quot;, &quot;Firebase storage&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="459-Zs-Fow">
+                                <rect key="frame" x="10" y="374.5" width="355" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                <color key="textColor" red="0.58823529411764708" green="0.27058823529411763" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090196078431372548" green="0.094117647058823528" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pd9-QN-gKz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="01M-o0-n2H"/>
+                            <constraint firstItem="Pd9-QN-gKz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="052-xf-CvY"/>
+                            <constraint firstItem="459-Zs-Fow" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="10" id="1ex-fY-TrJ"/>
+                            <constraint firstItem="QyL-sQ-Au5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="B8T-6u-1uJ"/>
+                            <constraint firstItem="459-Zs-Fow" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Mqc-bG-dO3"/>
+                            <constraint firstItem="QyL-sQ-Au5" firstAttribute="top" secondItem="Pd9-QN-gKz" secondAttribute="bottom" constant="50" id="OvD-Qt-3oZ"/>
+                            <constraint firstItem="459-Zs-Fow" firstAttribute="top" secondItem="QyL-sQ-Au5" secondAttribute="bottom" constant="10" id="WIu-j3-DsD"/>
+                            <constraint firstAttribute="trailing" secondItem="459-Zs-Fow" secondAttribute="trailing" constant="10" id="avO-Z7-uMM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -25,4 +56,7 @@
             <point key="canvasLocation" x="-23" y="376"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chat" width="256" height="256"/>
+    </resources>
 </document>

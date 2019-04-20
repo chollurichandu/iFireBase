@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A09013221997EA7008E2094 /* GroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A09013121997EA7008E2094 /* GroupChatViewController.swift */; };
+		0A2D0FBA226AE8B400F1780F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D0FB9226AE8B400F1780F /* Extensions.swift */; };
 		0A42188021A2D56B008C489A /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42187F21A2D56B008C489A /* SampleViewController.swift */; };
 		0A42188221A2D5BD008C489A /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42188121A2D5BD008C489A /* SampleTableViewCell.swift */; };
 		0A554951219014F90016EB90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A554950219014F90016EB90 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		0942FC45EEB29EFE97C4AAAA /* Pods-iFireBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFireBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iFireBase/Pods-iFireBase.debug.xcconfig"; sourceTree = "<group>"; };
 		0A09013121997EA7008E2094 /* GroupChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
+		0A2D0FB9226AE8B400F1780F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0A42187F21A2D56B008C489A /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		0A42188121A2D5BD008C489A /* SampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTableViewCell.swift; sourceTree = "<group>"; };
 		0A55494D219014F90016EB90 /* iFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,7 +99,6 @@
 		0A55494F219014F90016EB90 /* iFireBase */ = {
 			isa = PBXGroup;
 			children = (
-				0AADA2FB219C023200EBF403 /* libs */,
 				0A55497721903F840016EB90 /* ViewControlers */,
 				0A55496921903F230016EB90 /* libs */,
 				0A554966219025DE0016EB90 /* Cells */,
@@ -170,40 +171,9 @@
 				0A8D10E8219955F700DA39C4 /* LoginViewController.swift */,
 				0AADA2F9219C012500EBF403 /* EditProfileViewController.swift */,
 				0A42187F21A2D56B008C489A /* SampleViewController.swift */,
+				0A2D0FB9226AE8B400F1780F /* Extensions.swift */,
 			);
 			path = ViewControlers;
-			sourceTree = "<group>";
-		};
-		0AADA2FB219C023200EBF403 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				0AADA2FC219C023200EBF403 /* Mine */,
-			);
-			name = libs;
-			path = "../../shubham sharma/MyBuildingCodes/buildingcodes/libs";
-			sourceTree = "<group>";
-		};
-		0AADA2FC219C023200EBF403 /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-				0AADA2FD219C023200EBF403 /* UIButton */,
-				0AADA2FE219C023300EBF403 /* UIViewOverride */,
-			);
-			path = Mine;
-			sourceTree = "<group>";
-		};
-		0AADA2FD219C023200EBF403 /* UIButton */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIButton;
-			sourceTree = "<group>";
-		};
-		0AADA2FE219C023300EBF403 /* UIViewOverride */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIViewOverride;
 			sourceTree = "<group>";
 		};
 		81473CAD37E60610FC0BA94A /* Frameworks */ = {
@@ -392,6 +362,7 @@
 				0A554951219014F90016EB90 /* AppDelegate.swift in Sources */,
 				0A55497321903F230016EB90 /* NavButton.swift in Sources */,
 				0A55497D219063B10016EB90 /* RightChatTableViewCell.swift in Sources */,
+				0A2D0FBA226AE8B400F1780F /* Extensions.swift in Sources */,
 				0A55497921903FBF0016EB90 /* ChatTableViewCell.swift in Sources */,
 				0A554965219025A00016EB90 /* UsersListViewController.swift in Sources */,
 				0A8D10E9219955F700DA39C4 /* LoginViewController.swift in Sources */,

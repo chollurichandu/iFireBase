@@ -51,14 +51,14 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func signUp(_ sender: Any) {
-        if emailField.text == ""{
+        if displayName.text == ""{
+            self.showAlertWithMessage(message: "Please enter Display name")
+            return
+        }else if emailField.text == ""{
             self.showAlertWithMessage(message: "Please enter E-mail")
             return
         }else if passwordField.text == ""{
             self.showAlertWithMessage(message: "Please enter Password")
-            return
-        }else if displayName.text == ""{
-            self.showAlertWithMessage(message: "Please enter Display name")
             return
         }
         
@@ -87,16 +87,6 @@ class ViewController: UIViewController {
         let signInVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.navigationController?.pushViewController(signInVC, animated: true)
       
-    }
-    
-}
-
-extension UIViewController {
-    func showAlertWithMessage(message:String) {
-        let alert  = UIAlertController.init(title: "Bargain builder", message:message , preferredStyle:.alert)
-        let action = UIAlertAction.init(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(action)
-        self.present(alert, animated:true, completion: nil)
     }
     
 }

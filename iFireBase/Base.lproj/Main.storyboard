@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6hq-u1-4Ij">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6hq-u1-4Ij">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -204,7 +204,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xIi-7Y-a3S">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xIi-7Y-a3S">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -212,7 +212,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GVJ-V1-Mq3" id="IP1-UW-xuK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmj-Jm-AUV" customClass="SSView" customModule="iFireBase" customModuleProvider="target">
@@ -280,11 +280,11 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEt-Nv-kUt" customClass="CustomButton" customModule="iFireBase" customModuleProvider="target">
-                                <rect key="frame" x="303" y="595" width="52" height="52"/>
+                                <rect key="frame" x="325" y="617" width="30" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.1237049009" blue="0.73005557440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="YxH-yU-M4V"/>
-                                    <constraint firstAttribute="width" constant="52" id="cii-ox-a42"/>
+                                    <constraint firstAttribute="height" constant="30" id="YxH-yU-M4V"/>
+                                    <constraint firstAttribute="width" constant="30" id="cii-ox-a42"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="12" height="12"/>
                                 <state key="normal" image="group_chat"/>
@@ -298,17 +298,15 @@
                                     <segue destination="pKR-n3-7Fd" kind="show" id="AfG-xf-jYK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysh-Ud-0fh">
-                                <rect key="frame" x="15" y="606" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysh-Ud-0fh">
+                                <rect key="frame" x="15" y="617" width="48" height="30"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logout:" destination="bKg-Tg-txy" eventType="touchUpInside" id="BXf-c6-0vk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltd-wh-Nxa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltd-wh-Nxa">
                                 <rect key="frame" x="150" y="617" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit Profile"/>
                                 <connections>
                                     <action selector="editProfile:" destination="bKg-Tg-txy" eventType="touchUpInside" id="l54-uZ-IBg"/>
@@ -319,9 +317,13 @@
                         <constraints>
                             <constraint firstItem="xIi-7Y-a3S" firstAttribute="leading" secondItem="YQI-us-fGK" secondAttribute="leading" id="1Rq-Sq-Yst"/>
                             <constraint firstItem="YQI-us-fGK" firstAttribute="trailing" secondItem="xIi-7Y-a3S" secondAttribute="trailing" id="4Ta-vK-C90"/>
+                            <constraint firstItem="ysh-Ud-0fh" firstAttribute="centerY" secondItem="ltd-wh-Nxa" secondAttribute="centerY" id="Fbf-F0-SnQ"/>
+                            <constraint firstItem="sEt-Nv-kUt" firstAttribute="centerY" secondItem="ltd-wh-Nxa" secondAttribute="centerY" id="LHB-5i-iOs"/>
                             <constraint firstItem="YQI-us-fGK" firstAttribute="trailing" secondItem="sEt-Nv-kUt" secondAttribute="trailing" constant="20" id="M5L-Iy-hlf"/>
+                            <constraint firstItem="YQI-us-fGK" firstAttribute="bottom" secondItem="ltd-wh-Nxa" secondAttribute="bottom" constant="20" id="N3L-Eb-wq4"/>
+                            <constraint firstItem="ltd-wh-Nxa" firstAttribute="centerX" secondItem="X1t-0M-MuO" secondAttribute="centerX" id="Nw1-jt-J6H"/>
                             <constraint firstItem="YQI-us-fGK" firstAttribute="bottom" secondItem="xIi-7Y-a3S" secondAttribute="bottom" id="cEo-Lt-iaC"/>
-                            <constraint firstItem="YQI-us-fGK" firstAttribute="bottom" secondItem="sEt-Nv-kUt" secondAttribute="bottom" constant="20" id="ftq-ge-w1L"/>
+                            <constraint firstItem="ysh-Ud-0fh" firstAttribute="leading" secondItem="YQI-us-fGK" secondAttribute="leading" constant="15" id="pZo-dm-BJJ"/>
                             <constraint firstItem="xIi-7Y-a3S" firstAttribute="top" secondItem="YQI-us-fGK" secondAttribute="top" id="qhH-Uo-YcF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YQI-us-fGK"/>
@@ -519,7 +521,7 @@
                                     <outlet property="delegate" destination="dxO-0E-MxB" id="K6c-1Q-ASr"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o5f-OJ-IbH">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type your message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o5f-OJ-IbH">
                                 <rect key="frame" x="0.0" y="627" width="259" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="VoF-Cr-6Fp"/>
@@ -694,20 +696,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zGe-cS-Ijy">
-                                <rect key="frame" x="67" y="59" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zGe-cS-Ijy" customClass="SSImage" customModule="iFireBase" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="60" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ICb-j6-ULS"/>
+                                    <constraint firstAttribute="width" constant="200" id="MZk-gg-0eO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="radius" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radiusAmt">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dy-Od-mUW">
-                                <rect key="frame" x="164" y="207" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dy-Od-mUW">
+                                <rect key="frame" x="126" y="280" width="123" height="30"/>
+                                <state key="normal" title="Update Profile pic"/>
                                 <connections>
                                     <action selector="editImage:" destination="Tcf-f0-fBR" eventType="touchUpInside" id="jfW-2e-wYW"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2dy-Od-mUW" firstAttribute="centerX" secondItem="dSU-dh-fNf" secondAttribute="centerX" id="4cc-Kw-N6l"/>
+                            <constraint firstItem="zGe-cS-Ijy" firstAttribute="centerX" secondItem="dSU-dh-fNf" secondAttribute="centerX" id="CCY-rO-EaZ"/>
+                            <constraint firstItem="zGe-cS-Ijy" firstAttribute="top" secondItem="jwz-UH-4cP" secondAttribute="top" constant="40" id="Un5-nR-h3y"/>
+                            <constraint firstItem="2dy-Od-mUW" firstAttribute="top" secondItem="zGe-cS-Ijy" secondAttribute="bottom" constant="20" id="yib-1H-cHZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jwz-UH-4cP"/>
                     </view>
                     <connections>
@@ -834,7 +850,7 @@
                                     <outlet property="delegate" destination="pKR-n3-7Fd" id="N8J-E4-OF3"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eD6-Sz-plg">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type your message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eD6-Sz-plg">
                                 <rect key="frame" x="0.0" y="627" width="306" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="G0Q-q6-8oF"/>

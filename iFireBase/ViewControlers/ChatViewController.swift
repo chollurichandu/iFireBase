@@ -52,7 +52,7 @@ class ChatViewController: UIViewController {
         
     }
     fileprivate func downloadProfilePic(imageView:UIImageView, image:String) {
-        if let user = Auth.auth().currentUser{
+        if Auth.auth().currentUser != nil{
             let storage = Storage.storage()
             
             let storageRef = storage.reference(withPath:"chat/\(image)")//.child("2465785.jpg") //forURL:"gs://developers-point.appspot.com/2465785.jpg"
@@ -225,7 +225,7 @@ extension ChatViewController:UIImagePickerControllerDelegate, UINavigationContro
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         dismiss(animated: true, completion: nil)
         
-        if let user = Auth.auth().currentUser {
+        if Auth.auth().currentUser != nil {
             if let imageUrl:URL = info[UIImagePickerController.InfoKey.imageURL] as? URL {
                 // Get a non-default Storage bucket
                 let storage = Storage.storage()
